@@ -1,0 +1,485 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0A0A0F"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        tools:ignore="UselessParent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/settings_ip_label"
+            android:textColor="#00FFFF"
+            android:fontFamily="monospace"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/etSettingsIp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxWidth="488dp"
+            android:layout_gravity="center_horizontal"
+            android:minHeight="48dp"
+            android:background="#12121F"
+            android:textColor="#FFF"
+            android:padding="12dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="monospace"
+            android:inputType="phone"
+            android:hint="@string/default_ip"
+            android:textColorHint="#444"
+            android:importantForAutofill="no"
+            tools:ignore="LabelFor" />
+
+        <Button
+            android:id="@+id/btnSaveSettings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxWidth="488dp"
+            android:layout_gravity="center_horizontal"
+            android:minHeight="48dp"
+            android:text="@string/btn_save_ip"
+            android:backgroundTint="#00FF66"
+            android:textColor="#000"
+            android:layout_marginTop="8dp"
+            android:fontFamily="monospace"
+            android:textStyle="bold"/>
+
+        <Button
+            android:id="@+id/btnCheckConnection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxWidth="488dp"
+            android:layout_gravity="center_horizontal"
+            android:minHeight="48dp"
+            android:text="@string/btn_check_connection"
+            android:backgroundTint="#12121F"
+            android:textColor="#00FFFF"
+            android:layout_marginTop="4dp"
+            android:fontFamily="monospace"/>
+
+        <!-- Wi-Fi & Network Block -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/settings_wifi_label"
+            android:textColor="#00FFFF"
+            android:fontFamily="monospace"
+            android:textStyle="bold"
+            android:layout_marginTop="24dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#12121F"
+            android:padding="12dp"
+            android:layout_marginTop="8dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+            <TextView
+                android:id="@+id/tvCurrentWifiSsid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/wifi_status_loading"
+                android:textColor="#00FF66"
+                android:textSize="11sp"
+                android:fontFamily="monospace"/>
+
+            <!-- AP1 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ap1_label"
+                android:textColor="#555577"
+                android:textSize="11sp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="monospace"
+                tools:ignore="SmallSp" />
+
+            <EditText
+                android:id="@+id/etWifiSsid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxWidth="488dp"
+                android:layout_gravity="center_horizontal"
+                android:minHeight="48dp"
+                android:background="#0A0A0F"
+                android:textColor="#FFF"
+                android:padding="8dp"
+                android:layout_marginTop="4dp"
+                android:hint="@string/hint_ap1_ssid"
+                android:textColorHint="#444"
+                android:textSize="12sp"
+                android:fontFamily="monospace"
+                android:inputType="textNoSuggestions"
+                android:importantForAutofill="no"
+                tools:ignore="LabelFor" />
+
+            <EditText
+                android:id="@+id/etWifiPass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxWidth="488dp"
+                android:layout_gravity="center_horizontal"
+                android:minHeight="48dp"
+                android:background="#0A0A0F"
+                android:textColor="#FFF"
+                android:padding="8dp"
+                android:layout_marginTop="4dp"
+                android:hint="@string/hint_ap1_pass"
+                android:textColorHint="#444"
+                android:textSize="12sp"
+                android:fontFamily="monospace"
+                android:inputType="textPassword"
+                android:importantForAutofill="no"
+                tools:ignore="LabelFor" />
+
+            <!-- AP2 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ap2_label"
+                android:textColor="#555577"
+                android:textSize="11sp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="monospace"
+                tools:ignore="SmallSp" />
+
+            <EditText
+                android:id="@+id/etWifiSsid2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxWidth="488dp"
+                android:layout_gravity="center_horizontal"
+                android:minHeight="48dp"
+                android:background="#0A0A0F"
+                android:textColor="#FFF"
+                android:padding="8dp"
+                android:layout_marginTop="4dp"
+                android:hint="@string/hint_ap2_ssid"
+                android:textColorHint="#444"
+                android:textSize="12sp"
+                android:fontFamily="monospace"
+                android:inputType="textNoSuggestions"
+                android:importantForAutofill="no"
+                tools:ignore="LabelFor" />
+
+            <EditText
+                android:id="@+id/etWifiPass2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxWidth="488dp"
+                android:layout_gravity="center_horizontal"
+                android:minHeight="48dp"
+                android:background="#0A0A0F"
+                android:textColor="#FFF"
+                android:padding="8dp"
+                android:layout_marginTop="4dp"
+                android:hint="@string/hint_ap2_pass"
+                android:textColorHint="#444"
+                android:textSize="12sp"
+                android:fontFamily="monospace"
+                android:inputType="textPassword"
+                android:importantForAutofill="no"
+                tools:ignore="LabelFor" />
+
+            <!-- Hostname -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/hostname_label"
+                android:textColor="#555577"
+                android:textSize="11sp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="monospace"
+                tools:ignore="SmallSp" />
+
+            <EditText
+                android:id="@+id/etHostname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxWidth="488dp"
+                android:layout_gravity="center_horizontal"
+                android:minHeight="48dp"
+                android:background="#0A0A0F"
+                android:textColor="#FFF"
+                android:padding="8dp"
+                android:layout_marginTop="4dp"
+                android:hint="@string/hint_hostname"
+                android:textColorHint="#444"
+                android:textSize="12sp"
+                android:fontFamily="monospace"
+                android:inputType="textNoSuggestions"
+                android:importantForAutofill="no"
+                tools:ignore="LabelFor" />
+
+            <Button
+                android:id="@+id/btnApplyWifi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxWidth="488dp"
+                android:layout_gravity="center_horizontal"
+                android:minHeight="48dp"
+                android:text="@string/btn_apply_wifi"
+                android:backgroundTint="#00FF66"
+                android:textColor="#000"
+                android:layout_marginTop="12dp"
+                android:textSize="12sp"
+                android:fontFamily="monospace"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <!-- Available Networks -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/available_networks_label"
+            android:textColor="#00FFFF"
+            android:fontFamily="monospace"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            android:textSize="12sp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#12121F"
+            android:padding="12dp"
+            android:layout_marginTop="8dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+            <ProgressBar
+                android:id="@+id/pbWifiList"
+                style="?android:attr/progressBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/tvWifiList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/wifi_scan_hint"
+                android:textColor="#AAA"
+                android:textSize="11sp"
+                android:fontFamily="monospace"/>
+
+            <Button
+                android:id="@+id/btnRefreshWifiList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxWidth="488dp"
+                android:layout_gravity="center_horizontal"
+                android:minHeight="48dp"
+                android:text="@string/btn_refresh_wifi"
+                android:backgroundTint="#12121F"
+                android:textColor="#00FFFF"
+                android:layout_marginTop="8dp"
+                android:textSize="11sp"
+                android:fontFamily="monospace"/>
+        </LinearLayout>
+
+        <!-- Audio Monitoring Section -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/monitoring_label"
+            android:textColor="#00FFFF"
+            android:fontFamily="monospace"
+            android:textStyle="bold"
+            android:layout_marginTop="24dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#12121F"
+            android:padding="12dp"
+            android:layout_marginTop="8dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/monitoring_desc"
+                android:textColor="#AAA"
+                android:textSize="11sp"
+                android:fontFamily="monospace"
+                android:layout_marginBottom="8dp"/>
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switchMonitoring"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:textColor="#00FF66"
+                android:fontFamily="monospace"
+                android:thumbTint="#00FF66"
+                tools:ignore="UseSwitchCompatOrMaterialXml" />
+        </LinearLayout>
+
+        <!-- Output Device Section -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/output_device_label"
+            android:textColor="#00FFFF"
+            android:fontFamily="monospace"
+            android:textStyle="bold"
+            android:layout_marginTop="24dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#12121F"
+            android:padding="12dp"
+            android:layout_marginTop="8dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+            <Spinner
+                android:id="@+id/spinnerOutputDevice"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:maxWidth="488dp"
+                android:layout_gravity="center_horizontal"
+                android:background="#0A0A0F"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark"
+                android:contentDescription="@string/output_device_label"/>
+
+            <Button
+                android:id="@+id/btnApplyOutput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxWidth="488dp"
+                android:layout_gravity="center_horizontal"
+                android:minHeight="48dp"
+                android:text="@string/btn_apply_reboot"
+                android:backgroundTint="#FF0055"
+                android:textColor="#FFF"
+                android:layout_marginTop="8dp"
+                android:fontFamily="monospace"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <!-- Firmware Update Section -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/firmware_update_label"
+            android:textColor="#00FFFF"
+            android:fontFamily="monospace"
+            android:textStyle="bold"
+            android:layout_marginTop="24dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#12121F"
+            android:padding="12dp"
+            android:layout_marginTop="8dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+            <TextView
+                android:id="@+id/tvVersionInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/version_unknown_label"
+                android:textColor="#AAA"
+                android:textSize="11sp"
+                android:fontFamily="monospace"/>
+
+            <TextView
+                android:id="@+id/tvLatestVersion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/unknown"
+                android:textColor="#00FFFF"
+                android:textSize="11sp"
+                android:fontFamily="monospace"
+                android:layout_marginTop="2dp"
+                android:visibility="gone"/>
+
+            <Button
+                android:id="@+id/btnCheckUpdate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxWidth="488dp"
+                android:layout_gravity="center_horizontal"
+                android:minHeight="48dp"
+                android:text="@string/btn_check_version"
+                android:backgroundTint="#12121F"
+                android:textColor="#00FFFF"
+                android:layout_marginTop="8dp"
+                android:fontFamily="monospace"/>
+
+            <LinearLayout
+                android:id="@+id/llUpdateProgress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    android:id="@+id/tvUpdateStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ota_in_progress"
+                    android:textColor="#FF0055"
+                    android:textSize="11sp"
+                    android:fontFamily="monospace"
+                    android:gravity="center"/>
+
+                <ProgressBar
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:indeterminate="true"/>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnInstallUpdate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxWidth="488dp"
+                android:layout_gravity="center_horizontal"
+                android:minHeight="48dp"
+                android:text="@string/btn_install_update"
+                android:backgroundTint="#FF0055"
+                android:textColor="#FFF"
+                android:layout_marginTop="8dp"
+                android:fontFamily="monospace"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/ota_warning"
+            android:textColor="#555"
+            android:textSize="11sp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="32dp"
+            android:fontFamily="monospace"
+            tools:ignore="SmallSp" />
+
+    </LinearLayout>
+</ScrollView>

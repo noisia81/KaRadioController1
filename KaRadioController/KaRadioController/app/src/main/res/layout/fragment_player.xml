@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0A0A0F"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <!-- Заголовок в стиле Киберпанк (Вес 3) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="8dp"
+        android:background="#1A1A2F"
+        android:layout_marginBottom="4dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/app_title_cyberpunk"
+            android:textColor="#00FFFF"
+            android:fontFamily="monospace"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:shadowColor="#00FFFF"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="15"/>
+
+        <View
+            android:id="@+id/viewStatusDot"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:background="#FF0055"
+            android:layout_marginEnd="8dp"/>
+
+        <TextView
+            android:id="@+id/tvStatusText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/status_offline"
+            android:textColor="#FF0055"
+            android:fontFamily="monospace"
+            android:textStyle="bold"
+            android:textSize="12sp"/>
+    </LinearLayout>
+
+    <!-- Информационное окно (Вес 7) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="7"
+        android:background="#12121F"
+        android:orientation="vertical"
+        android:padding="12dp"
+        android:gravity="center"
+        android:layout_marginBottom="4dp">
+
+        <TextView
+            android:id="@+id/tvStationNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/station_ch_label"
+            android:textColor="#FF0055"
+            android:fontFamily="monospace"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/tvStationName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/no_station"
+            android:textColor="#FFFFFF"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:maxLines="2"
+            android:ellipsize="end"/>
+
+        <TextView
+            android:id="@+id/tvTrackName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/status_stopped"
+            android:textColor="#00FFFF"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:maxLines="2"
+            android:ellipsize="end"/>
+
+        <TextView
+            android:id="@+id/tvBitrate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/bitrate_unknown"
+            android:textColor="#00FF66"
+            android:textSize="12sp"
+            android:layout_marginTop="4dp"
+            android:fontFamily="monospace"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <!-- Область управления (Равномерное распределение элементов) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="22"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <!-- Громкость -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3"
+            android:orientation="vertical"
+            android:gravity="center">
+            <TextView
+                android:id="@+id/tvVolLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/vol_label"
+                android:textColor="#00FF66"
+                android:fontFamily="monospace"
+                android:textSize="12sp"
+                android:textStyle="bold"/>
+            <SeekBar
+                android:id="@+id/seekBarVolume"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="254"
+                android:layout_marginTop="2dp"/>
+        </LinearLayout>
+
+        <!-- EQ Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/eq_title"
+            android:textColor="#00FFFF"
+            android:fontFamily="monospace"
+            android:textSize="11sp"
+            android:layout_marginBottom="2dp"/>
+
+        <!-- Treble Lvl -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2.5"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+            <TextView android:layout_width="75dp" android:layout_height="wrap_content" android:text="@string/treble_lvl" android:textColor="#FFF" android:textSize="11sp"/>
+            <SeekBar android:id="@+id/sbTreble" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:max="15"/>
+            <TextView android:id="@+id/tvTrebleVal" android:layout_width="45dp" android:layout_height="wrap_content" android:text="@string/treble_val" android:textColor="#FFF" android:gravity="end" android:textSize="11sp"/>
+        </LinearLayout>
+
+        <!-- Treble Frq -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2.5"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+            <TextView android:layout_width="75dp" android:layout_height="wrap_content" android:text="@string/treble_frq" android:textColor="#FFF" android:textSize="11sp"/>
+            <SeekBar android:id="@+id/sbTrebleFreq" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:max="15"/>
+            <TextView android:id="@+id/tvTrebleFreqVal" android:layout_width="45dp" android:layout_height="wrap_content" android:text="@string/treble_freq_val" android:textColor="#FFF" android:gravity="end" android:textSize="11sp"/>
+        </LinearLayout>
+
+        <!-- Bass Enh -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2.5"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+            <TextView android:layout_width="75dp" android:layout_height="wrap_content" android:text="@string/bass_enh" android:textColor="#FFF" android:textSize="11sp"/>
+            <SeekBar android:id="@+id/sbBass" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:max="15"/>
+            <TextView android:id="@+id/tvBassVal" android:layout_width="45dp" android:layout_height="wrap_content" android:text="@string/bass_val" android:textColor="#FFF" android:gravity="end" android:textSize="11sp"/>
+        </LinearLayout>
+
+        <!-- Bass Frq -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2.5"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+            <TextView android:layout_width="75dp" android:layout_height="wrap_content" android:text="@string/bass_frq" android:textColor="#FFF" android:textSize="11sp"/>
+            <SeekBar android:id="@+id/sbBassFreq" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:max="13"/>
+            <TextView android:id="@+id/tvBassFreqVal" android:layout_width="45dp" android:layout_height="wrap_content" android:text="@string/bass_freq_val" android:textColor="#FFF" android:gravity="end" android:textSize="11sp"/>
+        </LinearLayout>
+
+        <!-- Spacial -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2.5"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+            <TextView android:layout_width="75dp" android:layout_height="wrap_content" android:text="@string/spacial" android:textColor="#FFF" android:textSize="11sp"/>
+            <SeekBar android:id="@+id/sbSpacial" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:max="3"/>
+            <TextView android:id="@+id/tvSpacialVal" android:layout_width="45dp" android:layout_height="wrap_content" android:text="@string/spacial_off" android:textColor="#FFF" android:gravity="end" android:textSize="11sp"/>
+        </LinearLayout>
+
+        <!-- Кнопки управления (Вес 4.5) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="4.5"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <ImageButton
+                android:id="@+id/btnPrev"
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:src="@android:drawable/ic_media_previous"
+                android:backgroundTint="#12121F"
+                android:contentDescription="@string/cd_prev"/>
+
+            <ImageButton
+                android:id="@+id/btnPlay"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@android:drawable/ic_media_play"
+                android:backgroundTint="#12121F"
+                android:layout_marginHorizontal="12dp"
+                android:contentDescription="@string/cd_play"/>
+
+            <ImageButton
+                android:id="@+id/btnStop"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@android:drawable/ic_media_pause"
+                android:backgroundTint="#12121F"
+                android:layout_marginEnd="12dp"
+                android:contentDescription="@string/cd_stop"/>
+
+            <ImageButton
+                android:id="@+id/btnNext"
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:src="@android:drawable/ic_media_next"
+                android:backgroundTint="#12121F"
+                android:contentDescription="@string/cd_next"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,110 @@
+<resources>
+    <string name="app_name">KaRadioController</string>
+    <string name="vol_label">ГРОМКОСТЬ: %1$d%%</string>
+    <string name="treble_val">%1$.1f dB</string>
+    <string name="treble_freq_val">%1$d kHz</string>
+    <string name="bass_val">%1$d dB</string>
+    <string name="bass_freq_val">%1$d Hz</string>
+    <string name="current_version_label">Current: %1$s</string>
+    <string name="latest_version_label">Latest: %1$s</string>
+    <string name="checking_updates">Checking&#8230;</string>
+    <string name="station_switch_toast">Переключение на станцию №%1$d</string>
+    <string name="station_ch_label">STATION CH: %1$s</string>
+    <string name="track_name_prefix">>> %1$s</string>
+    <string name="bitrate_val">%1$s kbps</string>
+    <string name="bitrate_unknown">--- kbps</string>
+    <string name="connected_to_ssid">Подключено к Wi-Fi: %1$s</string>
+    <string name="spacial_off">Off</string>
+    <string name="spacial_minimal">Minimal</string>
+    <string name="spacial_normal">Normal</string>
+    <string name="spacial_max">Max</string>
+    <string name="status_offline">OFFLINE</string>
+    <string name="status_playing">PLAYING</string>
+    <string name="status_stopped">STOPPED</string>
+    <string name="status_error">ERROR</string>
+    <string name="no_connection">No connection</string>
+    <string name="no_metadata">No metadata</string>
+    <string name="no_station">No station</string>
+    <string name="server_error">Server error</string>
+    <string name="unknown">неизвестно</string>
+    <string name="output_device_label">> УСТРОЙСТВО ВЫВОДА (Output):</string>
+    <string name="btn_apply_reboot">ПРИМЕНИТЬ И ПЕРЕЗАГРУЗИТЬ</string>
+    <string name="settings_ip_label">> KARADIO IP ADDRESS:</string>
+    <string name="default_ip">192.168.1.100</string>
+    <string name="btn_save_ip">SAVE DEVICE IP</string>
+    <string name="btn_check_connection">CHECK CONNECTION</string>
+    <string name="settings_wifi_label">> Wi-Fi &amp; NETWORK:</string>
+    <string name="wifi_status_loading">Status: Loading…</string>
+    <string name="ap1_label">Access Point 1 (AP!):</string>
+    <string name="hint_ap1_ssid">AP! SSID</string>
+    <string name="hint_ap1_pass">AP! Password</string>
+    <string name="ap2_label">Access Point 2 (AP2):</string>
+    <string name="hint_ap2_ssid">AP2 SSID</string>
+    <string name="hint_ap2_pass">AP2 Password</string>
+    <string name="hostname_label">Hostname:</string>
+    <string name="hint_hostname">karadio</string>
+    <string name="btn_apply_wifi">APPLY Wi-Fi SETTINGS</string>
+    <string name="available_networks_label">> AVAILABLE NETWORKS (SCAN):</string>
+    <string name="wifi_scan_hint">Tap Refresh to scan for SSIDs…</string>
+    <string name="btn_refresh_wifi">REFRESH NETWORK LIST</string>
+    <string name="firmware_update_label">> FIRMWARE UPDATE:</string>
+    <string name="version_unknown_label">Version: unknown</string>
+    <string name="btn_check_version">CHECK VERSION</string>
+    <string name="ota_in_progress">OTA Update in progress…</string>
+    <string name="btn_install_update">INSTALL UPDATE (OTA)</string>
+    <string name="ota_warning">* OTA update requires an active internet connection on the ESP32. Do not power off.</string>
+
+    <!-- Player Screen -->
+    <string name="app_title_cyberpunk">KaRadio32RC by Noisia81</string>
+    <string name="eq_title">EQUALIZER (VS1053)</string>
+    <string name="treble_lvl">TRB LVL</string>
+    <string name="treble_frq">TRB FRQ</string>
+    <string name="bass_enh">BSS ENH</string>
+    <string name="bass_frq">BSS FRQ</string>
+    <string name="spacial">SPACIAL</string>
+    <string name="cd_prev">Prev</string>
+    <string name="cd_play">Play</string>
+    <string name="cd_stop">Stop</string>
+    <string name="cd_next">Next</string>
+
+    <!-- Station Dialog -->
+    <string name="edit_station_title">Edit station</string>
+    <string name="slot_number_label">Slot number:</string>
+    <string name="name_label">Name:</string>
+    <string name="full_url_label">Full URL:</string>
+    <string name="url_hint">http://</string>
+    <string name="or_separator">or</string>
+    <string name="url_label">Url:</string>
+    <string name="port_label">Port:</string>
+    <string name="path_label">Path:</string>
+    <string name="vol_offset_label">Volume offset:</string>
+    <string name="btn_save">save</string>
+    <string name="btn_erase">erase</string>
+    <string name="btn_abort">abort</string>
+    <string name="cd_edit">Edit</string>
+
+    <!-- New Strings for placeholders/defaults -->
+    <string name="ota_status_starting">Starting OTA&#8230;</string>
+    <string name="error_checking_updates">Error checking updates</string>
+    <string name="wifi_list_item_format">%1$s\n</string>
+    <string name="wifi_scanning">Scanning nearby networks&#8230;</string>
+    <string name="wifi_scan_finished">Scan finished or no networks found.</string>
+
+    <!-- Menu Titles -->
+    <string name="menu_player">Плеер</string>
+    <string name="menu_stations">Станции</string>
+    <string name="menu_settings">Настройки</string>
+
+    <!-- Toasts & Error Messages -->
+    <string name="toast_ip_saved">IP сохранен успешно</string>
+    <string name="toast_wifi_applying">Применение Wi-Fi настроек&#8230;</string>
+    <string name="toast_output_applying">Применение настроек выхода&#8230;</string>
+    <string name="toast_ota_request_sent">Запрос на обновление отправлен&#8230;</string>
+    <string name="toast_conn_success">Успешно: Подключено к KaRadio</string>
+    <string name="toast_conn_error">Ошибка: Устройство недоступно</string>
+    <string name="station_empty">[Empty Station]</string>
+    <string name="monitoring_label">> AUDIO MONITORING (Local Playback):</string>
+    <string name="monitoring_desc">Play the current KaRadio32 stream on this device.</string>
+    <string name="toast_monitoring_on">Monitoring enabled</string>
+    <string name="toast_monitoring_off">Monitoring disabled</string>
+</resources>
